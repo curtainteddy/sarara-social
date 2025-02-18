@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@source "../views";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-coral-red-50: #fff1f1;
+    --color-coral-red-100: #ffe0e0;
+    --color-coral-red-200: #ffc6c6;
+    --color-coral-red-300: #ff9f9f;
+    --color-coral-red-400: #ff6868;
+    --color-coral-red-500: #fb4141;
+    --color-coral-red-600: #e91919;
+    --color-coral-red-700: #c41111;
+    --color-coral-red-800: #a21212;
+    --color-coral-red-900: #861616;
+    --color-coral-red-950: #490606;
+    --dark-theme-background: #0e0e11;
+}
+
+:focus {
+    outline: 0;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Gradient animations */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientFlow 3s ease infinite;
+}
+
+/* Gradient border animation */
+@keyframes gradient-xy {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.animate-gradient-xy {
+    animation: gradient-xy 15s ease infinite;
+    background-size: 400% 400%;
+}
